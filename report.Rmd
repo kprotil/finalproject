@@ -1,0 +1,45 @@
+---
+Title: "Project R Markdown"
+author: "Karl Protil"
+---
+
+# Introduction
+
+This dataset contains county-level information for several key measures of COVID-19, including case counts, hospital admissions, inpatient bed usage, and the overall community risk level. This dataset is updated weekly.
+
+The objective of this analysis is to generate a report on each Maryland county's COVID-19 statistics, to serve as a guide for residents.
+
+
+# Analysis
+
+```{r, setchunks, echo=FALSE}
+knitr::opts_chunk$set(
+  echo=FALSE,
+  message=FALSE,
+  warning=FALSE
+)
+```
+
+
+```{r, reading data}
+here::i_am("report.Rmd")
+```
+
+```{r, table}
+readRDS(
+  file = here::here("output/casetable.rds")
+)
+```
+
+
+
+This table shows the average number of covid cases for each health service area in Maryland. Sussex, DE to Kent, DE has the lowest average number of covid cases, while Allegany (Cumberland), MD to Garrett, MD has the highest average number of covid cases.
+
+```{r, linear regression, echo=FALSE}
+knitr::include_graphics(
+  here::here("output/linreg.png")
+)
+```
+
+
+This figure plots hospital admissions against covid cases. An increase in covid cases per 100,000 individuals is not significantly associated with an increase in hospital admissions per 100,000 individuals.
