@@ -13,3 +13,7 @@ output/linreg.png: code/03_make_linreg.R output/data_clean.rds
 .PHONY: clean
 clean:
 	rm -f output/*.Rds && rm -f report.html && rm -f output/*.png && rm -f output/casetable.rds
+	
+.PHONY: install
+install:
+	Rscript -e "renv::restore(prompt=FALSE)"
