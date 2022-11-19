@@ -3,5 +3,5 @@ here::i_am(
 )
 
 rmarkdown::render(
-  "report.rmd"
+  "report.Rmd"
 )

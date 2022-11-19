@@ -1,5 +1,5 @@
 here::i_am("code/02_make_table.R")
-data <- readRDS(file="output/data_clean.Rds")
+data <- readRDS(file="output/data_clean.rds")
 
 library(dplyr)
 library(ggplot2)

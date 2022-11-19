@@ -13,5 +13,5 @@ cleaned$cases <- as.numeric(as.character(cleaned$covid_cases_per_100k))
 
 saveRDS(
   cleaned,
-  file= here::here("output/data_clean.Rds")
+  file= here::here("output/data_clean.rds")
 )
