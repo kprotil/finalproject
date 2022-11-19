@@ -10,11 +10,11 @@ The table can be generated from the 02_make_table.R code found in the code file,
 
 The scatterplot can be generated from the 03_make_linreg.R code found in the code file, or by making output/linreg.png
 
-The report can be generated several ways. The report.Rmd file can be knitted, the 04_render_report.R code (found in the code file) can be run, or you can make report
+The report can be generated several ways. The report.Rmd file can be knitted, the 04_render_report.R code (found in the code file) can be run, or you can use `make report`
 
 To synchronize your package repository, use the following commands in the console in order:
 
 `source("renv/activate.R")`
-`renv::restor()`
+`renv::restore()`
 
 Together, these will install the needed packages and update the versions. This may take several minutes.
