@@ -5,16 +5,33 @@
 ## __Project Summary__
 This project creates a report on COVID-19 cases in Maryland. The report includes two main components: a table of average covid cases per 100,000 people for each county, and a scatterplot of hospital admissions per 100,000 people and covid cases per 100,000, with each point representing a county in Maryland.
 
-## __Instructions__
-The table can be generated from the 02_make_table.R code found in the code file, or by making output/casetable.rds
+## __Building the Figures__
+There are two ways to build any of the figures
 
-The scatterplot can be generated from the 03_make_linreg.R code found in the code file, or by making output/linreg.png
+Run the 01_data_cleaning.R code found in the code file
+`make output/data_clean.rds` will also create the clean dataset
 
-The report can be generated several ways. The report.Rmd file can be knitted, the 04_render_report.R code (found in the code file) can be run, or you can use `make report`
+Run the 02_make_table.R code found in the code file
+`make output/casetable.rds` will also create the case table
 
-To synchronize your package repository, use the following commands in the console in order:
+Run the 03_make_linreg.R code found in the code file
+`make output/linreg.png` will also create the linear regression figure
 
-`source("renv/activate.R")`
-`renv::restore()`
+The report can be generated several ways
+Knit the report.Rmd file
+Run the 04_render_report.R code found in the code file
+`make report`
 
-Together, these will install the needed packages and update the versions. This may take several minutes.
+## __Synchonizing Package Repository__
+There are two ways to synchronize the package repository
+`source("renv/activate.R")` and then `renv::restore()` will synchronize the repository
+`make install` will also synchronize the repository
+
+## __Building the Docker Image__
+There are two ways to build the docker image
+`make project_image` will create the docker image
+`docker pull kprotil/finalproject` will download the image from dockerhub
+https://hub.docker.com/repository/docker/kprotil/finalproject/general
+
+## __Using Docker to Run the Report__
+`make docker-run` will run docker automatically and create the report in the "report" folder
