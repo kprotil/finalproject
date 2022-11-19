@@ -25,5 +25,8 @@ project_image: Dockerfile $(PROJECTFILES)
 	docker build -t project_image .
 	touch $@
 
-docker-run: project_image
+docker-run-pc:
 	docker run -v "//$$(pwd)"/report:/project/report project_image
+	
+docker-run-mac:
+	docker run -v "/$$(pwd)"/report:/project/report project_image

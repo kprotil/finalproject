@@ -49,4 +49,6 @@ There are two ways to build the docker image
 https://hub.docker.com/repository/docker/kprotil/finalproject/general
 
 ## __Using Docker to Run the Report__
-`make docker-run` will run docker automatically and create the report in the "report" folder
+`make docker-run-pc` will run docker automatically and create the report in the "report" folder, if you are on a pc
+
+`make docker-run-mac` will run docker automatically and create the report in the "report" folder, if you are on a mac
