@@ -8,29 +8,41 @@ This project creates a report on COVID-19 cases in Maryland. The report includes
 ## __Building the Figures__
 There are two ways to build any of the figures
 
+
 Run the 01_data_cleaning.R code found in the code file
+
 `make output/data_clean.rds` will also create the clean dataset
 
 Run the 02_make_table.R code found in the code file
+
 `make output/casetable.rds` will also create the case table
 
 Run the 03_make_linreg.R code found in the code file
+
 `make output/linreg.png` will also create the linear regression figure
 
 The report can be generated several ways
+
 Knit the report.Rmd file
+
 Run the 04_render_report.R code found in the code file
+
 `make report`
 
 ## __Synchonizing Package Repository__
 There are two ways to synchronize the package repository
+
 `source("renv/activate.R")` and then `renv::restore()` will synchronize the repository
+
 `make install` will also synchronize the repository
 
 ## __Building the Docker Image__
 There are two ways to build the docker image
+
 `make project_image` will create the docker image
+
 `docker pull kprotil/finalproject` will download the image from dockerhub
+
 https://hub.docker.com/repository/docker/kprotil/finalproject/general
 
 ## __Using Docker to Run the Report__
