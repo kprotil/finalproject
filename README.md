@@ -5,22 +5,25 @@
 ## __Project Summary__
 This project creates a report on COVID-19 cases in Maryland. The report includes two main components: a table of average covid cases per 100,000 people for each county, and a scatterplot of hospital admissions per 100,000 people and covid cases per 100,000, with each point representing a county in Maryland.
 
-## __Building the Figures__
+## __Building the Figures and Report__
 There are two ways to build any of the figures
 
-
+### Clean Data
 Run the 01_data_cleaning.R code found in the code file
 
 `make output/data_clean.rds` will also create the clean dataset
 
+### Case Table
 Run the 02_make_table.R code found in the code file
 
 `make output/casetable.rds` will also create the case table
 
+### Linear Regression
 Run the 03_make_linreg.R code found in the code file
 
 `make output/linreg.png` will also create the linear regression figure
 
+### Report Generation
 The report can be generated several ways
 
 Knit the report.Rmd file
