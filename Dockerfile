@@ -7,6 +7,12 @@ RUN Rscript -e "install.packages('ggplot2')"
 
 RUN apt-get update && apt-get install -y pandoc
 
+RUN apt-get install -y libcurl4-openssl-dev
+RUN apt-get install -y libxml2-dev
+RUN apt-get install -y libfontconfig1-dev
+RUN apt-get install -y libssl-dev
+RUN Rscript -e "install.packages('kableExtra')"
+
 RUN mkdir project
 workdir /project
 
