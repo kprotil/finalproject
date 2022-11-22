@@ -46,6 +46,8 @@ There are two ways to build the docker image
 
 `docker pull kprotil/finalproject` will download the image from dockerhub
 
+`make pull image` will also download the image from dockerhub
+
 https://hub.docker.com/repository/docker/kprotil/finalproject/general
 
 ## __Using Docker to Run the Report__

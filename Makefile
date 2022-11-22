@@ -25,8 +25,11 @@ project_image: Dockerfile $(PROJECTFILES)
 	docker build -t project_image .
 	touch $@
 
+pull image:
+	docker pull kprotil/finalproject
+
 docker-run-pc:
-	docker run -v "//$$(pwd)"/report:/project/report project_image
+	docker run -v "//$$(pwd)"/report:/project/report kprotil/finalproject
 	
 docker-run-mac:
-	docker run -v "/$$(pwd)"/report:/project/report project_image
+	docker run -v "/$$(pwd)"/report:/project/report kprotil/finalproject
